@@ -1,3 +1,5 @@
+<!----cite: https://medium.freecodecamp.org/a-gentle-introduction-to-d3-how-to-build-a-reusable-bubble-chart-9106dc4f6c46 ---->
+
 <!DOCTYPE html>
 
 <div class="chart-example" id="chart"><svg></svg></div>
@@ -11,8 +13,7 @@
           console.error('Error getting or parsing the data.');
           throw error;
       }
-      // selection.datum() returns the bound datum for the first element in the selection and 
-      //  doesn't join the specified array of data with the selected elements
+      
       var chart = bubbleChart().width(1000).height(1000);
       d3.select('#chart').datum(data).call(chart);
     });
